@@ -5,7 +5,7 @@ import bcrypt from "bcrypt"
 
 const { Schema, model } = mongoose
 
-const userSchema = new Schema({
+const UserSchema = new Schema({
     name: { type: String },
     surname: {type: String },
     email: { type: String, required: true, unique: true },
@@ -15,7 +15,7 @@ const userSchema = new Schema({
     googleId: { type: String },
 })
 
-userSchema.pre("save", async function (next) {
+UserSchema.pre("save", async function (next) {
     const newUser = this
     const plainPw = newUser.password
     if (newUser.isModified("password")) {
