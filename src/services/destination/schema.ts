@@ -1,6 +1,4 @@
-import { model } from "mongoose";
-import mongoose from "mongoose"
-import { IAccommodation } from "../../interfaces/IAccommodation";
+import mongoose, { model } from "mongoose";
 import { IDestModel } from "../../interfaces/IDestModel";
 
  const DestinationSchema = new mongoose.Schema<IDestModel>({

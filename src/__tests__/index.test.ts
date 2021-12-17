@@ -42,7 +42,7 @@ describe("Testing server", () => {
   });
 
 
- // POST /accommodation = Creat a new accomodation entry
+ // POST /accommodation = Create a new accomodation entry
   it(
     "should check that the POST /accommodation endpoint creates and returns a new post "
   ,
