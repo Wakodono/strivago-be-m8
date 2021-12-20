@@ -1,5 +1,5 @@
-export interface IUser {
-    _id: string
+
+export interface UserModel {
     name: string
     surname: string
     email: string
@@ -8,3 +8,4 @@ export interface IUser {
     refreshToken?: string
     googleId?: string
 }
+

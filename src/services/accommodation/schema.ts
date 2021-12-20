@@ -1,12 +1,12 @@
 import { model } from "mongoose";
 import mongoose from "mongoose"
-import { IAccModel } from "../../interfaces/IAccModel";
+import { AccModel } from "../../interfaces/AccModel";
 
-export const AccommodationSchema = new mongoose.Schema<IAccModel>({
+export const AccommodationSchema = new mongoose.Schema<AccModel>({
     name: { type: String, required: true },
     city: { type: String, required: true }
 }, { timestamps: true })
 
-export const AccommodationModel = model<IAccModel>("accommodation", AccommodationSchema);
+export const AccommodationModel = model<AccModel>("accommodation", AccommodationSchema);
 
 

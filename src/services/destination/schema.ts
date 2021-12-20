@@ -1,7 +1,7 @@
 import mongoose, { model } from "mongoose";
-import { IDestModel } from "../../interfaces/IDestModel";
+import { DestModel } from "../../interfaces/DestModel";
 
- const DestinationSchema = new mongoose.Schema<IDestModel>({
+ const DestinationSchema = new mongoose.Schema<DestModel>({
     city: { type: String, required: true },
     accommodation: [
            {    type: 'ObjectId', ref: 'Accommodation' }
@@ -9,7 +9,7 @@ import { IDestModel } from "../../interfaces/IDestModel";
 }, { timestamps: true })
 
 
-export const DestinationModel = model<IDestModel>("Destination", DestinationSchema);
+export const DestinationModel = model<DestModel>("Destination", DestinationSchema);
 
 // // `Parent` represents the object as it is stored in MongoDB
 // interface Parent {
